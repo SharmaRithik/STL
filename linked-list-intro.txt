@@ -1,0 +1,71 @@
+1. LINKED LIST
+	1.1 linear data structure
+	1.2 non contigous
+	1.3 elements are linked using pointers
+	1.4 each node caintains the data and reference of next node
+	1.5 last node reference to null
+	1.6 the entry point in a linked list is called head
+	1.7 head is just a reference to first node
+	1.8 if list is empty head points to null
+2.CREATING LINKED LIST CLASS
+	2.1 points 3,4&5 are function of this class
+	2.2 	class linked_list{
+			private:
+				node *head,*tail;
+			public:
+				linked_list(){
+					head=NULL;
+					tail=NULL:
+				}
+			3->
+			4->
+			5->
+		};
+3.DEFINING A NODE 
+	3.1 using node
+		struct node{
+			int data;
+			struct node* next;
+		};
+4.INSERTING NODE
+	4.1 At starting
+		void front(int n){
+			node* temp=new node;
+			temp->data=n;
+			temp->next=head;
+			head=temp;
+		};
+	4.2 At end
+		void end(int n){
+			node* temp=new node;
+			temp->data=n;
+			temp->next=NULL;
+
+			if(head==NULL){
+				head=temp;
+				tail=temp;
+			}
+			else{
+				tail->next=temp;
+				tail=tail->next;
+			}
+		};
+	4.3 in between
+		void between(node* a,int value){
+			node* p=new node;
+			p->data=value;
+			p->next=a->next;
+			a->next=p;
+		};
+5.PRINTING
+	5.1 using fuction
+		static void print(node* head){
+			if(head==NULL){
+				cout<<"NULL"<<endl;
+			}
+			else{
+				cout<<head->data<<endl;
+				display(head->next);
+			}
+		};
+
