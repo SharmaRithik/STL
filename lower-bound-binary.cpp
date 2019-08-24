@@ -9,7 +9,6 @@ int binarylower(int a[],int m,int low,int up)
                 mid=(low+up)/2;
                 if(m==a[mid])
                 {
-                        c=m;
                         return binarylower(a,m,low,mid-1);
                 }
                 else if(m<a[mid])
