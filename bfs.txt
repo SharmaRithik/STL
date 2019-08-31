@@ -1,0 +1,5 @@
+In BFS we start traversing from a selected node
+bfs - breadth first search
+* first we have to move horizontally and visit all nodes of a layer 
+* move to next layer
+
